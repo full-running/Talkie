@@ -112,13 +112,6 @@ app.get("/docs", swaggerUI({ url: "/openapi.json" }));
 
 // 예시 엔드포인트들 (OpenAPI 포함)
 app.openapi(
-  { method: "get", path: "/api/health", tags: ["Health"],
-    responses: { 200: { description: "ok",
-      content: { "application/json": { schema: z.object({ ok: z.boolean(), ts: z.string() }) } } } } },
-  (c) => c.json({ ok: true, ts: new Date().toISOString() })
-);
-
-app.openapi(
   { method: "get", path: "/api/users", tags: ["Users"],
     responses: { 200: { description: "users",
       content: { "application/json": { schema: z.array(z.object({ id: z.string(), username: z.string(), email: z.string(), createdAt: z.string() })) } } } } },
@@ -156,8 +149,6 @@ serve({ fetch: app.fetch, port }, () => {
 
 ## 🔎 cURL 예제
 ```bash
-curl http://localhost:8787/api/health
-
 curl http://localhost:8787/api/users
 curl http://localhost:8787/api/posts
 curl http://localhost:8787/api/comments
