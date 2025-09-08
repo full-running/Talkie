@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    // 입출력 경로
+    "rootDir": "src",
+    "outDir": "dist",
+
+    // 모듈/환경
+    "target": "ES2020",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2020"],
+    "types": ["node"],
+
+    // 품질/호환
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    // 기타
+    "sourceMap": true,
+    "declaration": false
+  },
+  "include": ["src"]
+}
