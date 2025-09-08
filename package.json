@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "name": "talkie",
+  "private": true,
+  "workspaces": ["front", "back"],
+  "scripts": {
+    "dev": "concurrently -n back,front -c green,blue \"cd back && npm run dev\" \"cd front && npm run dev\"",
+    "dev:back": "cd back && npm run dev",
+    "dev:front": "cd front && npm run dev"
+  }
+}
