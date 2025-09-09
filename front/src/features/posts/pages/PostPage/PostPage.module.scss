@@ -1,0 +1,126 @@
+/* PostPage.module.scss */
+
+/* 파스텔 무지개 색상 애니메이션 */
+@keyframes pastelRainbow {
+  0% {
+    background-color: #ffb3ba; /* 연한 핑크 */
+  }
+  16.7% {
+    background-color: #ffdfba; /* 연한 주황 */
+  }
+  33.4% {
+    background-color: #ffffba; /* 연한 노랑 */
+  }
+  50.1% {
+    background-color: #baffc9; /* 연한 민트 */
+  }
+  66.8% {
+    background-color: #bae1ff; /* 연한 파랑 */
+  }
+  83.5% {
+    background-color: #e3b7ff; /* 연한 라일락 */
+  }
+  100% {
+    background-color: #ffb3ba; /* 다시 연한 핑크로 */
+  }
+}
+
+.post {
+  &__header {
+    animation: pastelRainbow 18s ease-in-out infinite;
+    background:linear-gradient(120deg,rgba(242,247,251,.8),rgba(222,227,231,.8),rgba(255,255,255,.8),rgba(242,247,251,.8));
+    background-size: 400% 400%;
+    color:#111827;
+    padding:1.6rem 3.2rem;
+    margin-bottom: 1.75rem;
+    border:1px solid #E8EDF1;
+    border-radius:12px;
+
+    &__title {
+        font-weight:600;
+        font-size: 1.6rem;
+        line-height: 1.37;
+    }
+
+    &__desc {
+        font-weight:400;
+        font-size: 1.4rem;
+        line-height: 1.37;
+    }
+  }
+
+  &__list {
+    // display: grid;
+    // gap: 10px;
+  }
+
+  &__item {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 3.2rem;
+    transition: box-shadow .15s ease, transform .05s ease;
+    cursor:pointer;
+
+    &:first-child{
+        border-top:1px solid #e5e7eb;
+    }
+    &:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,.05);
+      transform: translateY(-1px);
+    }
+
+    &__head {
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:.4rem;
+    }
+    &__author{
+        font-size:1.4rem;
+        font-weight:600;
+        color:#374151;
+    }
+    &__created_time{
+        font-size:1.4rem;
+        font-weight:600;
+        color:#374151;
+    }
+    &__body{
+        margin:.5rem 0;
+    }
+    &__title{
+        font-size:1.6rem;
+        font-weight:600;
+        color:#111827;
+
+        display: block;            /* 또는 inline-block 허용 */
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100%;           /* 혹은 고정 px/rem 지정 가능 */
+    }
+    &__foot{
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+    }
+    &__count{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:0.4rem;
+        font-size:1.4rem;
+        font-weight:600;
+        color:#374151;
+    }
+  }
+
+  /* 빈 상태 */
+  &__empty {
+    padding: 24px;
+    border: 1px dashed #d1d5db;
+    border-radius: 10px;
+    background: #fafafa;
+    color: #6b7280;
+    text-align: center;
+  }
+}

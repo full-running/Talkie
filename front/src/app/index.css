@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -13,4 +13,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+} */
+
+html {
+  font-size: 62.5%;   /* 1rem ≈ 10px */
+}
+
+body {
+  font-size: 1.6rem;  /* 실제 기준 텍스트는 16px */
 }

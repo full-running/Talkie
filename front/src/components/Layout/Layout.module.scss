@@ -1,0 +1,81 @@
+/* Layout.module.scss */
+/* 한글 가독성 기본값 */
+:root {
+  --page-max: 960px;
+  --page-pad: 24px;
+  --radius: 12px;
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .06);
+}
+
+/* Block */
+.layout {
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* 한글 줄바꿈 품질 ↑ */
+  word-break: keep-all;
+  line-height: 1.65;
+  letter-spacing: -0.2px;
+
+  /* Block modifier: 센터 정렬 */
+  &--center {
+    display: grid;
+    place-items: center;
+    padding: var(--page-pad);
+  }
+
+  /* Block modifier: 더 넓은 화면 */
+  &--wide {
+    .layout__container {
+      max-width: 1200px;
+    }
+  }
+
+  /* Element: 페이지 컨테이너 (가로폭/가운데 정렬) */
+  &__container {
+    width: 100%;
+    max-width: var(--page-max);
+    margin-inline: auto;
+    padding: var(--page-pad);
+  }
+
+  /* Element: 패널 감싸기 (흰 바탕 카드) */
+  &__panel {
+    // background: var(--panel);
+    // border: 1px solid var(--border);
+    // border-radius: var(--radius);
+    // box-shadow: var(--shadow);
+  }
+
+  /* Element: 내부 패딩 */
+//   &__inner {
+//     padding: clamp(16px, 2.3vw, 28px);
+//   }
+
+  /* Element modifier: 내부 여백 더 크게 */
+//   &__inner--padded {
+//     padding: clamp(24px, 3vw, 40px);
+//   }
+
+  /* 공통 타이포(레이아웃 하위에서만 적용) */
+//   h1, h2, h3 {
+//     font-weight: 700;
+//     line-height: 1.35;
+//     letter-spacing: -0.3px;
+//   }
+
+//   h1 { font-size: clamp(20px, 2.2vw, 28px); }
+//   h2 { font-size: clamp(18px, 2vw, 24px); }
+//   h3 { font-size: clamp(16px, 1.8vw, 20px); }
+
+//   p { color: var(--text); }
+//   small, .muted { color: var(--muted); }
+}
