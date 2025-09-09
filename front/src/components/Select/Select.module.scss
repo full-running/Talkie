@@ -1,0 +1,35 @@
+.select {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.select__label {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.select__native {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+}
+
+/* 크기 옵션 */
+.select--sm .select__native {
+  padding: 0 1rem;
+  font-size:1.2rem;
+  height:2.4rem;
+}
+
+.select--md .select__native {
+  padding: 0 1.2rem;
+  font-size:1.4rem;
+  height:3.6rem;
+}
+
+.select--lg .select__native {
+  padding: 0 1.4rem;
+  font-size:2.2rem;
+  height:4.2rem;
+}

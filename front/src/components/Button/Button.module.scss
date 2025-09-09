@@ -1,0 +1,31 @@
+.btn {
+  display: inline-flex;
+  align-items:center;
+  justify-content:center;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  box-sizing:border-box;
+  &--primary {
+    background: #0090F9;
+    color: #FFFFFF;
+  }
+  &--secondary {
+    background: #f3f4f6;
+    color: #111;
+  }
+
+  &--sm {
+    font-size:1.2rem;
+    height:2.4rem;
+  }
+  &--md {
+    font-size:1.4rem;
+    height:3.6rem;
+  }
+  &--lg {
+    font-size:2.2rem;
+    height:4.2rem;
+  }
+}
